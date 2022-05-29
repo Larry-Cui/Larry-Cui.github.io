@@ -9,9 +9,6 @@ repository:
 twitter: 
 github: https://github.com/Larry-Cui
 
-paginate: 10
-paginate_path: "/:num/"
-
 google_analytics:
 comments: false
 disqus: watery-jekyll
@@ -19,6 +16,9 @@ disqus: watery-jekyll
 author: Anonymous
 author_pic: /img/husky_dog.jpeg
 author_bio: >-
+
+paginate: 4
+paginate_path: "/:num/"
 
 markdown: kramdown
 
