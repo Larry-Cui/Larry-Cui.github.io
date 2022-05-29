@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   framework while still following the best practices possible for
   accessibility and search-engine optimization.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://watery.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://larry-cui.github.io/jekyll_watery/" #"https://watery.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
 repository: brennanbrown/watery
 twitter: brennankbrown
 github: brennanbrown
@@ -42,7 +42,6 @@ author_bio: >-
   and I'm looking to help those that need web development work done, or 
   searching for ideas and management for their next content project.
 author_pic: https://brennanbrown.ca/img/avatar.png
-
 paginate: 4
 paginate_path: "/:num/"
 
