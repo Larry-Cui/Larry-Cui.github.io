@@ -31,13 +31,13 @@ You can find the source code for Jekyll at GitHub:
 
 [jekyll-organization]: https://github.com/jekyll -->
 
-### Blog
+### Features
 
 There are a lot of jekyll blog themes available, but this theme stands out for two reasons:
 
 1. Simplicity. No fancy pictures or scrolling nav-bar or any other bling bling stuff to distract readers from the content. I go for this theme just because its contant first idea.
 2. Tag. Tag works as category for the blogs. When blogs pile up day after day, it becomes extremely difficult to find one specific article both for readers and myself. With tags, all articles are neatly sorted and nicely listed.
 
-### Content
+### Blog Content
 
 This blog mainly collects my study notes on math and programming. I might also upload some reading notes as well as travel logs.
