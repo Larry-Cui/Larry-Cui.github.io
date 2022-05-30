@@ -2,6 +2,8 @@
 layout: post
 title: Interval Estimation
 date: 2022-3-28
+tags:
+  - Stats
 ---
 
 We can get the estimate for parameters based on a survey of $n$ results, either by the method

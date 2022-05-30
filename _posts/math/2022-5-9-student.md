@@ -2,6 +2,8 @@
 layout: post
 title: Finding Student t Distribution
 date: 2022-5-9
+tags:
+  - Stats
 ---
 
 In reality we may never know the variance of the population, and we have only a

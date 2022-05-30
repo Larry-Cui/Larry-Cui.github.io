@@ -2,6 +2,8 @@
 layout: post
 title: The Geometric Distribution
 date: 2021-9-29
+tags:
+  - Stats
 ---
 
 Follow the logic of geometric distribution, if we want to study the probability of $r^{\text{th}}$ success

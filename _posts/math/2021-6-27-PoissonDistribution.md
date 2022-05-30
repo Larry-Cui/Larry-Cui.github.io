@@ -2,6 +2,8 @@
 layout: post
 title: Poisson Distribution
 date: 2021-6-30
+tags:
+  - Stats
 ---
 
 In the binomial distribution where `n` is quite large, it’s usually a tedious job to

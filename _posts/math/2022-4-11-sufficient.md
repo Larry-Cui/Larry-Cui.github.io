@@ -2,6 +2,8 @@
 layout: post
 title: Sufficient Estimators
 date: 2022-4-11
+tags:
+  - Stats
 ---
 
 After the expected value and variance of an estimator, we now discuss a third feature:

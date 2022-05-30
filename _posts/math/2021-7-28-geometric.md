@@ -2,6 +2,8 @@
 layout: post
 title: The Geometric Distribution
 date: 2021-9-28
+tags:
+  - Stats
 ---
 
 Consider a series of independent trials and each has one of two outcomes, success or failure.

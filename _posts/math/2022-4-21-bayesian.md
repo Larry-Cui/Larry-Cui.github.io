@@ -2,6 +2,8 @@
 layout: post
 title: Bayesian Estimation
 date: 2022-4-21
+tags:
+  - Stats
 ---
 
 Even can we accurately model the pdf a whole population of data, we may never know
