@@ -15,7 +15,7 @@ disqus: watery-jekyll
 author: Larry Cui
 author_pic: /img/husky_dog.jpeg
 author_bio: >-
-  A coder who was in many different professions but coding, a math student who chose many majors but math, and a father who's battling with his son but always love him.
+  A coder who was in many different professions but coding, a math student who chose many majors but math, and a father who's battling with his son but still loves him.
 
 paginate: 10
 paginate_path: "/:num/"
