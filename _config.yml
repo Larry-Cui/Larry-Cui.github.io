@@ -2,7 +2,7 @@ title: Essays
 email: 123456789@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
   A collection of GRE writing examples for your reference.
-baseurl: "https://larry-cui.github.io/jekyll_watery/" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll_watery" # the subpath of your site, e.g. /blog
 url: "https://larry-cui.github.io/jekyll_watery/" # the base hostname & protocol for your site, e.g. http://example.com
 repository:
 twitter:
