@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "larry-cui.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository:
 twitter:
-github: https://github.com/Larry-Cui/
+github: Larry-Cui
 
 google_analytics:
 comments: false
