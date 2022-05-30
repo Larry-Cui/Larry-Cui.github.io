@@ -15,7 +15,15 @@ disqus: watery-jekyll
 author: Larry Cui
 author_pic: /img/husky_dog.jpeg
 author_bio: >-
-  God, grant me the serenity to accept the things I cannot change,courage to change the things I can, and wisdom to know the difference.
+  God, 
+
+  grant me the serenity to accept the things I cannot change,
+
+  courage to change the things I can, 
+
+  and wisdom to know the difference.
+
+
    -- Karl Paul Reinhold Niebuhr (1892 – 1971)
 
 paginate: 10
