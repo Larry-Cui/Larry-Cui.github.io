@@ -1,20 +1,21 @@
-title: Essays
+title: Larry's Blog
 email: 123456789@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A collection of GRE writing examples for your reference.
+  code, math, books, travels and fun
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "larry-cui.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository:
 twitter:
-github:
+github: https://github.com/Larry-Cui/
 
 google_analytics:
 comments: false
 disqus: watery-jekyll
 
-author: Anonymous
+author: Larry Cui
 author_pic: /img/husky_dog.jpeg
 author_bio: >-
+  stay foolish, stay young
 
 paginate: 10
 paginate_path: "/:num/"
