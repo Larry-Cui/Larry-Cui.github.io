@@ -23,7 +23,7 @@ content-type: eg
         <h3 id="{{ tag | first }}">{{ tag | first | capitalize }}</h3>
         <ul>
         {% for post in tag.last %}
-            <li><a href="{{post.url}}">{{ post.title }} {{ post.date }}</a></li>
+            <li><a href="{{post.url}}">{{ post.title }} {{ post.date | date: "(%d-%m-%Y)"}}</a></li>
         {% endfor %}
         </ul>
     </div>
