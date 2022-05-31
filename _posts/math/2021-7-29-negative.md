@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Geometric Distribution
+title: The Negative Binomial Distribution
 date: 2021-9-29
 tags:
   - Stats
@@ -8,9 +8,9 @@ tags:
 
 Follow the logic of geometric distribution, if we want to study the probability of $r^{\text{th}}$ success
 in $k^{\text{th}}$ of a series of trials, it must be the case that $(r −1)$ success occur during the first $(k −1)$
-trials and the rth happens on exactly the $k^{\text{th}}$ trial.
+trials and the $r^{\text{th}}$ happens on exactly the $k^{\text{th}}$ trial.
 
-If we let X be the sum of independent variables $X1, X2, \dots, Xr$, and if $ X \rightarrow \infty$, the negative
+If we let $X$ be the sum of independent variables $X1, X2, \dots, Xr$, and if $ X \rightarrow \infty$, the negative
 binomial can be interpreted as $r$ successes happen one after another, and each of which follows
 the geometric distribution model.
 
