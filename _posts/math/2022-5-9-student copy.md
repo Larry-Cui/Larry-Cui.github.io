@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Finding Student t Distribution Copy
+title: test Copy
 date: 2022-5-11
 tags:
-  - Stats
+  - HTML
 ---
 
 In reality we may never know the variance of the population, and we have only a
