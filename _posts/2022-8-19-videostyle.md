@@ -3,7 +3,8 @@ layout: post
 title: Video Embedding and Styling on Webpages
 date: 2022-8-19
 tags:
-  - HTML & CSS
+  - HTML
+  - CSS
   - JavaScript
 ---
 
