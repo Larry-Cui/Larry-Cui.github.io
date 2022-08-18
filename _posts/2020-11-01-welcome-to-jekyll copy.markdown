@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!" copy 
+title: "Welcome to Jekyll! copy "
 date: 2022-8-19
 tags:
   - jekyll
