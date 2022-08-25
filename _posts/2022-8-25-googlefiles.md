@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Create Google File links Without Editting Function?
+title: Create Google File Dowanload Links in A Different Way
 date: 2022-08-25
 tags:
   - HTML+CSS
