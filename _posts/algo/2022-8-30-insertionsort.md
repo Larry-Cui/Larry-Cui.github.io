@@ -24,9 +24,12 @@ function shift(array, index1, index2) {
 
 	const temp = array[index1];
 	for (let i = index1; i > index2; i--) {
-		array[i] = array[i - 1]; // move all numbers at and above index2 one place right-ward
+		array[i] = array[i - 1];
+		// move all numbers at and above index2 one place right-ward
 	}
-	array[index2] = temp; // move number at index1 to index2, finish shift
+	array[index2] = temp;
+	// move number at index1 to index2, finish shift
+
 	return array;
 }
 
