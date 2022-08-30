@@ -44,3 +44,34 @@ function bubbleSort(array) {
 ```
 
 <br>
+
+In fact, the above algorithm can be optimized: think if in any loop of compare and swap, if no swap happens, what does it mean? It means the array has already been sorted!
+
+The updated bubbleSort function is like this:
+
+```js
+// BUBBLE SORT
+function bubbleSort(array) {
+	for (let i = 0; i <= array.length - 2; i++) {
+		// for n numbers, we only need to compare and swap at most (n-1) times
+
+		let t = 0;
+		// add a counter t
+
+		for (let j = 0; j <= array.length - 2 - i; j++) {
+			// after each loop of comparison and swap,
+			// the right most ordered elements plus one
+
+			if (array[j + 1] < array[j]) {
+				swap(array, j, j + 1);
+				t = t + 1;
+			}
+		}
+
+		if (t === 0) break;
+		// when in one loop t ends up at 0,
+		// we break the whole loop and give the array directly!
+	}
+	return array;
+}
+```
