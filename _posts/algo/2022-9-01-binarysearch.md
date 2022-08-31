@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Binary Search
-date:
 tags:
   - Algorithms
 ---
