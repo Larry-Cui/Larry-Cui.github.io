@@ -6,7 +6,7 @@ tags:
   - Algorithms
 ---
 
-<p color="MediumVioletRed"> **Comment:** I made the post date at Sept. 01, 2022 at first. It cost me the whole morning trying to make this post show up on the blog but failed. It turns out that you cannot pre-date post, otherwise it cannot be rendered by github. An 3-hour expensive lesson!~</p>
+<p style="color: MediumVioletRed"> **Comment:** I made the post date at Sept. 01, 2022 at first. It cost me the whole morning trying to make this post show up on the blog but failed. It turns out that you cannot pre-date post, otherwise it cannot be rendered by github. An 3-hour expensive lesson!~</p>
 
 If you are given an array of un-ordered numbers, and asked to find if there's a number, let's say, "23", in that array. How can you do the search?
 
