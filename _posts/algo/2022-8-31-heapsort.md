@@ -21,8 +21,8 @@ tags:
 	- [Time complexity of heapify method](#time-complexity-of-heapify-method)
 - [Deleting from Heap](#deleting-from-heap)
 	- [What we get from deleting the heap array?](#what-we-get-from-deleting-the-heap-array)
-- [Heap Sort](#heap-sort)
-- [The power of heap sort: best for priority queue](#the-power-of-heap-sort-best-for-priority-queue)
+- [Heap Sort: best for priority queue](#heap-sort-best-for-priority-queue)
+	- [The power of heap sort](#the-power-of-heap-sort)
 
 ## Definition and categories of heaps
 
@@ -172,23 +172,23 @@ Here we have an array: $[10, 20, 25, 6, 12, 15, 4, 16]$, the binary tree is like
 
 <br>
 
-1. Heapify is a leaf to root process. Check out all leaves at the bottom, nothing is below them, so they are heapified by defintion. now check out the one level above the leaves. We see "6" is less than its child "16", so swap.
+**1.** Heapify is a leaf to root process. Check out all leaves at the bottom, nothing is below them, so they are heapified by defintion. now check out the one level above the leaves. We see "6" is less than its child "16", so swap.
 
 <img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/ntyvYSvybYRXXMEShDTkKWSorRXvcYMCKXQS3XUdJzSaiBVEuzE2p2GAcSAiYs5w-_Y3LBdKxLyN5VwXH0yFKnYb5JQWCYIExjeM2wLPCnBPEoGNJ771TyTwgrB8pM0vlG9LB-l5lA=w2400" alt="insertion sort"/>
 
-2. look at one level above, number "20" has two children "16" and "12", they are both less "20", so nothing happens here.
+**2.** look at one level above, number "20" has two children "16" and "12", they are both less "20", so nothing happens here.
 
 <img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/fb9jCcAaFjmOjT5iVVJ-7A7_Rd3XBeFaBA5nyLtGtxijEC3rcq4bi3no2jVYQqucCTwMLPt2_M7lE0lxqkuzqkG6JBvEBIrvz05aEocrlPy1-gvuhnV-Ydz_UcRiXWy0Dh-DP0NOPQ=w2400" alt="insertion sort"/>
 
-3. look at another sibling at the same level, number "25" has two children "15" and "4", nothing happens either.
+**3.** look at another sibling at the same level, number "25" has two children "15" and "4", nothing happens either.
 
 <img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/kNdIzOkkhPMMsHaD5mBl5NjKlbHGyQyYlgEowj05q-eHqnDG4s2ZagHkrX2Q4jJMSCyKCv8NeZDEAgXwEhRDrGM35PK0dNW21TdksZE0V2iLkyrvAjPeYLLM1e_6Q-NGtfJKR8TUgQ=w2400" alt="insertion sort"/>
 
-4. Now we reach at the root. Apparently, root "10" is less than its children, but we pick the larger one "25" and swap with "10".
+**4.** Now we reach at the root. Apparently, root "10" is less than its children, but we pick the larger one "25" and swap with "10".
 
 <img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/UJAmV5We8_aaeVD7QbAprsBGOHHZjFqQ7b2Q40t4bJED-EWb3VGvvt-NGSxqrCLOBbgWT53kuIofyIcIw0Rrr41UUwqzCuv-BIrXTUocfzlBzm-k3lfpXat3Rwa9Ap4x_xLNYGVtLg=w2400" alt="insertion sort"/>
 
-5. We need to keep an eye on the swaped down element closely. We need to check if it's still smaller than its children in the new position, if not, swap doan again. Here we swap "10" with "15" to make sure it keeps on the right position.
+**5.** We need to keep an eye on the swaped down element closely. We need to check if it's still smaller than its children in the new position, if not, swap doan again. Here we swap "10" with "15" to make sure it keeps on the right position.
 
 <img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/zyH62HVXxk-gVMCZRuGGaCrV7Qq2upTprx_Vhq_BCw31SGb_-2tLJm1gFLt-Sfy_z5MW0Gt9keGL-cmYwo6txSqRGCDkEd2_ZaI6IOfc0PCbVhZXQhcruf1haIap_cFaMo8IZ62VIQ=w2400" alt="insertion sort"/>
 
@@ -312,7 +312,7 @@ function deleteRoot(arr) {
 
 Yes, we get an ordered list of numbers. From max heap, we get the numbers in a descending order, and from min heap, we get the numbers in an ascending order.
 
-## Heap Sort
+## Heap Sort: best for priority queue
 
 Now we have all the bricks for a heap sort algorithm. To implement heap sort on an un-ordered list of numbers:
 
@@ -321,7 +321,7 @@ Now we have all the bricks for a heap sort algorithm. To implement heap sort on 
 
 The time complexity is $n \log n $ for each step, so the total is $2n \log n$, but in practice we still call it $n\log n$.
 
-## The power of heap sort: best for priority queue
+### The power of heap sort
 
 Suppose you are running a service center. Calls for help coming in every day at different priority level. You need to record each call and dispatch your engineers to meet requirments from those with higher priorities first. How do you register and organize the calls?
 
@@ -335,6 +335,6 @@ Or you can do it with heap array:
 - you insert each incoming call into your existing heap array (max heap for example). How much time does it need? $O(\log n)$ for heap insertion.
 - when dispatch, you take the root out of the heap, and modify the array to keep it in a proper manner. How much time does it need? $O(\log n)$ for heap delete.
 
-In conclusion, heap structure is best for priority queue.
+**In conclusion, heap structure is best for priority queue.**
 
 <br>
