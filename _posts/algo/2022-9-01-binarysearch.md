@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Binary Search
-date: 2022-08-31
+date: 2022-10-31
 tags:
   - Algorithms
 ---
