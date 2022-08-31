@@ -17,7 +17,12 @@ tags:
 	- [Time complexity of heap insertion](#time-complexity-of-heap-insertion)
 - [Create a heap](#create-a-heap)
 	- [Time complexity](#time-complexity)
+- [Heapify: a faster method to create heap](#heapify-a-faster-method-to-create-heap)
+	- [Time complexity of heapify method](#time-complexity-of-heapify-method)
 - [Deleting from Heap](#deleting-from-heap)
+	- [What we get from deleting the heap array?](#what-we-get-from-deleting-the-heap-array)
+- [Heap Sort](#heap-sort)
+- [The power of heap sort: best for priority queue](#the-power-of-heap-sort-best-for-priority-queue)
 
 ## Definition and categories of heaps
 
@@ -155,6 +160,67 @@ const heapArray = (n) => {
 
 If we observe from the stand point of the last element, it takes at most $\log n$ steps to insert to the heap. As we have $n$ elements in total, so the worst scenario is $n \log n$.
 
+## Heapify: a faster method to create heap
+
+There's a clever way to sort the array into a heap without doing insertion one by one, this is called heapify. We will walk through an example to illustrate the algorithm. This example is from [Subham Datta's post](https://www.baeldung.com/cs/binary-tree-max-heapify), and again we are using max heap instance.
+
+Here we have an array: $[10, 20, 25, 6, 12, 15, 4, 16]$, the binary tree is like this:
+
+<div style="display: flex; justify-content: center">
+<img style="display: inline-block; width: 50%; object-fit: cover;" src="https://lh3.googleusercontent.com/dvWw_pPjWVuclJ0nKa9PsfRCWLYe4nEJBR_lR7h3uQekMd809PeXWPlk0oNNTyoIjqeh-Xf1TGGYg-ufFbdEOJPwXsxt3_l5uAVXc_0rb1I7-DJasRWADn0ymcHi6vm-Ww0lxf2Bhw=w2400" alt="insertion sort"/>
+</div>
+
+<br>
+
+1. Heapify is a leaf to root process. Check out all leaves at the bottom, nothing is below them, so they are heapified by defintion. now check out the one level above the leaves. We see "6" is less than its child "16", so swap.
+
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/ntyvYSvybYRXXMEShDTkKWSorRXvcYMCKXQS3XUdJzSaiBVEuzE2p2GAcSAiYs5w-_Y3LBdKxLyN5VwXH0yFKnYb5JQWCYIExjeM2wLPCnBPEoGNJ771TyTwgrB8pM0vlG9LB-l5lA=w2400" alt="insertion sort"/>
+
+2. look at one level above, number "20" has two children "16" and "12", they are both less "20", so nothing happens here.
+
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/fb9jCcAaFjmOjT5iVVJ-7A7_Rd3XBeFaBA5nyLtGtxijEC3rcq4bi3no2jVYQqucCTwMLPt2_M7lE0lxqkuzqkG6JBvEBIrvz05aEocrlPy1-gvuhnV-Ydz_UcRiXWy0Dh-DP0NOPQ=w2400" alt="insertion sort"/>
+
+3. look at another sibling at the same level, number "25" has two children "15" and "4", nothing happens either.
+
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/kNdIzOkkhPMMsHaD5mBl5NjKlbHGyQyYlgEowj05q-eHqnDG4s2ZagHkrX2Q4jJMSCyKCv8NeZDEAgXwEhRDrGM35PK0dNW21TdksZE0V2iLkyrvAjPeYLLM1e_6Q-NGtfJKR8TUgQ=w2400" alt="insertion sort"/>
+
+4. Now we reach at the root. Apparently, root "10" is less than its children, but we pick the larger one "25" and swap with "10".
+
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/UJAmV5We8_aaeVD7QbAprsBGOHHZjFqQ7b2Q40t4bJED-EWb3VGvvt-NGSxqrCLOBbgWT53kuIofyIcIw0Rrr41UUwqzCuv-BIrXTUocfzlBzm-k3lfpXat3Rwa9Ap4x_xLNYGVtLg=w2400" alt="insertion sort"/>
+
+5. We need to keep an eye on the swaped down element closely. We need to check if it's still smaller than its children in the new position, if not, swap doan again. Here we swap "10" with "15" to make sure it keeps on the right position.
+
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/zyH62HVXxk-gVMCZRuGGaCrV7Qq2upTprx_Vhq_BCw31SGb_-2tLJm1gFLt-Sfy_z5MW0Gt9keGL-cmYwo6txSqRGCDkEd2_ZaI6IOfc0PCbVhZXQhcruf1haIap_cFaMo8IZ62VIQ=w2400" alt="insertion sort"/>
+
+### Time complexity of heapify method
+
+We know the bottom leaves are always good as there are no children below them, which takes half of the total number of elements, $n/2$. For the first floor of the nodes, which has $n/4$ in total, will need to be brought down to leaves for one floor distance at the worst scenario. For the second floolr, the number of nodes comes to $n/8$, and distance is 2.
+
+The total moves at worst:
+$$S = \left(0*\frac{n}{2}\right)+\left(1*\frac{n}{4}\right)+\left(2*\frac{n}{8}\right)+ \cdots + \log n * 1$$
+
+Now we need some calculus skill here:
+
+$$
+\begin{align*}
+S&= \sum^{\log n}_{k=1} \frac{kn}{2^{k+1}} = \frac{n}{4} \sum^{\log n}_{k=1} \frac{k}{2^{k-1}}
+<  \frac{n}{4} \sum^{\infty}_{k=1} \frac{k}{2^{k-1}} \end{align*}
+$$
+
+If we let $x=1/2$, the right most term can be written as:
+
+$$
+\begin{align*}
+\frac{n}{4} \sum^{\infty}_{k=1} \frac{k}{2^{k-1}} &= \frac{n}{4} \sum^{\infty}_{k=1} kx^{k-1} \\
+&= \frac{n}{4} \frac{d}{dx} \left[\sum^{\infty}_{k=1} x^k \right] \\
+&= \frac{n}{4} \frac{d}{dx} \left[\frac{1}{1-x} \right] \\
+&= \frac{n}{4} \frac{1}{(1-x)^2} \\
+&= n
+\end{align*}
+$$
+
+So we conclude the complexity is $O (n)$.
+
 ## Deleting from Heap
 
 It seems opposite to intuition, but the rule of heap deleting is, you can only delete the root element. In max heap, this is the largest element, in min heap, the smallest.
@@ -241,5 +307,34 @@ function deleteRoot(arr) {
 	return arr;
 }
 ```
+
+### What we get from deleting the heap array?
+
+Yes, we get an ordered list of numbers. From max heap, we get the numbers in a descending order, and from min heap, we get the numbers in an ascending order.
+
+## Heap Sort
+
+Now we have all the bricks for a heap sort algorithm. To implement heap sort on an un-ordered list of numbers:
+
+1. create a heap array by inserting;
+2. delete root of the heap array one by one and copy it somewhere else to get an ordered list of numbers.
+
+The time complexity is $n \log n $ for each step, so the total is $2n \log n$, but in practice we still call it $n\log n$.
+
+## The power of heap sort: best for priority queue
+
+Suppose you are running a service center. Calls for help coming in every day at different priority level. You need to record each call and dispatch your engineers to meet requirments from those with higher priorities first. How do you register and organize the calls?
+
+You can do it in a linear way:
+
+- you take notes for each call and just keep them in the order as the time they came in. The time complexity for each registration is $O(1)$.
+- when your next engineer is available, you do a linear search of your registration book and find the entry with the highest priority. It takes a time complexity of $O(n)$.
+
+Or you can do it with heap array:
+
+- you insert each incoming call into your existing heap array (max heap for example). How much time does it need? $O(\log n)$ for heap insertion.
+- when dispatch, you take the root out of the heap, and modify the array to keep it in a proper manner. How much time does it need? $O(\log n)$ for heap delete.
+
+In conclusion, heap structure is best for priority queue.
 
 <br>
