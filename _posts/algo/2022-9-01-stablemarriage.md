@@ -35,6 +35,9 @@ The Gale–Shapley algorithm (also known as the deferred acceptance algorithm) c
 - If the woman being proposed is unmatched, she accepts the proposal from the man. If the woman is already engaged, she checks her waiting list (no entry of the woman's waiting list will be deleted or changed, it keeps whole throughout the matching process): if the proposer comes after the man she already engaged, she turns down the proposal; if comes before, she drops the current man and accept the latter's offer.
 - repeat above steps until all men and women are matched.
 
+$n+1$
+
+$$
 \begin{algorithm}[H]
 \DontPrintSemicolon
 \SetAlgoLined
@@ -54,6 +57,7 @@ instructions3\;
 }
 \caption{While loop with If/Else condition}
 \end{algorithm}
+$$
 
 They presented an algorithm to do so
 
@@ -69,56 +73,7 @@ In quicksort, divide and compare happen before the fork. When the recursion goes
 Here's the code in JavaScript for mergesort:
 
 ```js
-/* ************************* */
-// Mergesort recursion code
-/* ************************* */
 
-function mergeSort(array) {
-	const length = array.length;
-
-	// roll back condition:
-	// if a sub-array's length is equal to or less than 1,
-	// we are at the leaves of the binary tree.
-	if (length <= 1) return array;
-
-	// partitioning of the array/sub-array
-	// the array/sub-array haven't been sorted yet
-	const mid = Math.floor(length / 2);
-	const sortedLeftArray = mergeSort(array.slice(0, mid));
-	const sortedRightArray = mergeSort(array.slice(mid));
-
-	// here below is the sorting and merging process
-	// when the recursion reach the end of leaves and roll back
-	// the program will continue as below
-
-	// we define a merge function first
-	function merge(sortedLeftArray, sortedRightArray) {
-		let result = [];
-
-		// by combining push() and shift(), elements
-		// in left and right arrays are extracted and pushed to result
-
-		while (sortedLeftArray.length && sortedRightArray.length) {
-			// when array lenght = 0, bolean value would be false!!!
-
-			if (sortedLeftArray[0] < sortedRightArray[0]) {
-				result.push(sortedLeftArray.shift());
-			} else {
-				result.push(sortedRightArray.shift());
-			}
-		}
-
-		/* Either left/right array will be empty or both */
-		return [...result, ...sortedLeftArray, ...sortedRightArray];
-	}
-
-	// we call the merge function //
-	// merge() function constructs sorted array/sub-array,
-	// but it needs to be returned to
-	// above place where the mergeSort() is called to be
-	// further compared and merged.
-	return merge(sortedLeftArray, sortedRightArray);
-}
 ```
 
 Some notes to take here:
