@@ -20,7 +20,7 @@ A matching is not stable if:
 
 In other words, a matching is stable when there does not exist any pair which both prefer each other to their current partner under the matching.
 
-For detailed discussion on the time complexity topic, please refer to [_The Stable Marriage Problem_ <i class="fa-sharp fa-solid fa-file-pdf fa-lg"></i>](https://drive.google.com/file/d/1vosbdHsUlBAKfXCYkRtHvNEiFelf1isr/view?usp=sharing) by William Hunt.
+For detailed discussion on the time complexity topic, please refer to ["The Stable Marriage Problem" <i class="fa-sharp fa-solid fa-file-pdf fa-lg"></i>](https://drive.google.com/file/d/1vosbdHsUlBAKfXCYkRtHvNEiFelf1isr/view?usp=sharing) by William Hunt.
 
 ## Algorithm explained
 
