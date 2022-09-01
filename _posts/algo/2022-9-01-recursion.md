@@ -17,16 +17,7 @@ Let's take a look at a recursion example:
 const gcdFind = function (a, b) {
   // roll back condition
   if (a === b) return a;
-  else {
-    if (a > b) {
-      // roll back will stop
-      // at the higher level if
-      // no return added here
-      return gcdFind(a - b, b);
-    } else {
-      return gcdFind(a, b - a);
-    }
-  }
+  else return a > b ? gcdFind(a - b, b) : gcdFind(a, b - a);
 };
 ```
 
@@ -48,7 +39,7 @@ const factorial = (n) => {
 };
 ```
 
-We need to elaborate a bit about the above code. First of all, we are using a simplified if condition.
+We need to elaborate a bit about the above code. First of all, we are using a simplified `if` condition.
 
 ```js
 // usually if condition
@@ -65,7 +56,7 @@ if (n === 0) {
 
 ```js
 // when there's only single action,
-// we condense it into one line
+// we don't need curly brackets
 if (n === 0) return 1;
 else return n * factorial(n - 1);
 ```
@@ -78,7 +69,7 @@ Be noted that `return` is not needed in the simplified one line `if` condition, 
 n === 0 ? 1 : n * factorial(n - 1);
 ```
 
-However, sometimes we need be very careful: as the out-most loop of a recursive return the result to the **function itself**, not out of the function, when we call the function, we need an extra `return` to force the function to regurgitate the result.
+However, sometimes we need be very careful: as the out-most loop of a recursive returns the result to the **function itself**, not out of the function, when we call the function, we need an extra `return` to force the function to regurgitate the result.
 
 ```js
 return n === 0 ? 1 : n * factorial(n - 1);
