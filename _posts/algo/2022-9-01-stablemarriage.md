@@ -5,7 +5,7 @@ date: 2022-09-01
 tags:
   - Algorithms
 header-includes:
-  - \usepackage{algorithm2e}
+  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
 
 ## Introduction
