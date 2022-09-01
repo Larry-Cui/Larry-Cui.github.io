@@ -19,9 +19,7 @@ A matching is not stable if:
 When given a married pair, X-a and Y-b, if man X prefers b more than his current wife a and
 woman b prefers X more than her current man Y, then X-b is called a dissatised pair. X-b also has a very confusing name, the unstable pair, although they seem more stale than the currently matched pairs.
 
-For detailed discussion on the time complexity topic, please refer to _The Stable Marriage Problem_ () by William Hunt.
-
-<i class="fa-brands fa-square-github fa-xl"></i>
+For detailed discussion on the time complexity topic, please refer to [_The Stable Marriage Problem_ <i class="fa-sharp fa-solid fa-file-pdf fa-lg"></i>](https://drive.google.com/file/d/1vosbdHsUlBAKfXCYkRtHvNEiFelf1isr/view?usp=sharing) by William Hunt.
 
 - There is an element A of the first matched set which prefers some given element B of the second matched set over the element to which A is already matched, and
 - B also prefers A over the element to which B is already matched.
