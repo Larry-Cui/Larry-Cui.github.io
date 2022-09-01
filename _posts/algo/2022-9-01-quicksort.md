@@ -31,34 +31,34 @@ Here's the code in JavaScript for quicksort:
 /* ************************* */
 
 function quicksort(array) {
-  if (array.length <= 1) {
-    return array;
-  }
+	if (array.length <= 1) {
+		return array;
+	}
 
-  // we pick the first element of
-  // array or sub-array as the pivot
-  const pivot = array[0];
+	// we pick the first element of
+	// array or sub-array as the pivot
+	const pivot = array[0];
 
-  // we create two sub-arrays to store elements
-  // [] = new Array()
-  let left = [];
-  let right = [];
+	// we create two sub-arrays to store elements
+	// [] = new Array()
+	let left = [];
+	let right = [];
 
-  // first element has been picked as pivot
-  // so we start from index 1
-  for (let i = 1; i < array.length; i++) {
-    array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
-  }
+	// first element has been picked as pivot
+	// so we start from index 1
+	for (let i = 1; i < array.length; i++) {
+		array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+	}
 
-  // recursion happens here
-  // unlike others, it's a binary recursion
-  const partition_left_sort = quicksort(left);
-  const partition_right_sort = quicksort(right);
+	// recursion happens here
+	// unlike others, it's a binary recursion
+	const partition_left_sort = quicksort(left);
+	const partition_right_sort = quicksort(right);
 
-  // The concat() method is used to merge two or more arrays.
-  // This method does not change the existing arrays,
-  // but instead returns a new array.
-  return partition_left_sort.concat(pivot, partition_right_sort);
+	// The concat() method is used to merge two or more arrays.
+	// This method does not change the existing arrays,
+	// but instead returns a new array.
+	return partition_left_sort.concat(pivot, partition_right_sort);
 }
 ```
 
