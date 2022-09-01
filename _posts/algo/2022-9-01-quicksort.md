@@ -64,9 +64,9 @@ function quicksort(array) {
 
 Some notes to take here:
 
-- before every fork to go down into the recursion, the array/sub-array has been separated as less than and greater than the pivot.
-- when roll back from the single element array, `concat` is the key to stitch them together, and that's how we can get a sorted array back on the top.
-- we can pick the pivot element by any rules. The first, the last, the middle, or even a random one, the result is the same.
+- before every fork to dig into the recursion, the array/sub-array has been separated as two sub-arrays less than and greater than the pivot.
+- when roll back from the single element array, `concat` is the key to stitch them together, and that's how we can get a sorted array back on the top. No comparison is needed at the `concat` steps.
+- we can pick the pivot element by any rules. The first, the last, the middle, or even a random one, the results are the same.
 
 ## Time complexity
 
@@ -74,7 +74,7 @@ At the first fork, which means we pick the pivot, and partition the array into t
 
 At the second fork, we pick two pivots and carry out $n-3$ times of comparison and pushes, and go on at the same manner for further forks.
 
-If we are lucky to pick all pivots that can result in two same size sub-arrays, we will have $\log_2 n$ forks in total, so the complexity is $O (n \log n)$.
+If we are lucky to pick all pivots that can result in two same size sub-arrays, we will have $\log_2 n$ forks in total, so the complexity is $O (n \log n)$. If we are not such luck, we might end up with sub-arrays of $n/3$ and $2n/3$ sizes. In that case, we will have $\log_3 n$ forks, but the complexity is still $O (n \log n)$.
 
 Imagine however, we pick the smallest or largest element of the arrays each time before the fork, we end up with $n$ forks before we get the single element array at the uttermost level of the bichotomy. The total comparison and pushes is:
 
