@@ -4,8 +4,6 @@ title: Stable Marriage Problem
 date: 2022-09-01
 tags:
   - Algorithms
-header-includes:
-  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 ---
 
 ## Introduction
@@ -35,42 +33,17 @@ The Gale–Shapley algorithm (also known as the deferred acceptance algorithm) c
 - If the woman being proposed is unmatched, she accepts the proposal from the man. If the woman is already engaged, she checks her waiting list (no entry of the woman's waiting list will be deleted or changed, it keeps whole throughout the matching process): if the proposer comes after the man she already engaged, she turns down the proposal; if comes before, she drops the current man and accept the latter's offer.
 - repeat above steps until all men and women are matched.
 
-$n+1$
+### Pseudocode
 
-```algorithm
-\begin{algorithm}[H]
-\DontPrintSemicolon
-\SetAlgoLined
-\KwResult{Write here the result}
-\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
-\Input{Write here the input}
-\Output{Write here the output}
-\BlankLine
-\While{While condition}{
-instructions\;
-\eIf{condition}{
-instructions1\;
-instructions2\;
-}{
-instructions3\;
-}
-}
-\caption{While loop with If/Else condition}
-\end{algorithm}
-```
-
-They presented an algorithm to do so
-
-In quicksort, divide and compare happen before the fork. When the recursion goes down to the end, we only need to stitch individual elements back together. In mergesort, however, an array of elements is always divided equally without comparing. when the recursion goes down to the end, compare happens and stitch back with the designated order, ascending or descending.
-
-<img style="display: inline-block; width: 100%; object-fit: cover;" src="" alt="insertion sort"/>
-<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 14px; color: #777;">Illustration of Mergesort</div>
+<div style="display: flex; justify-content: center">
+<img style="display: inline-block; width: 70%; object-fit: cover;" src="https://lh3.googleusercontent.com/BnOkDtVASEAaZhbMfItoj1k17O9GJc2HZJLDvMEksEc1CHqeoKXaabFYhKvb8-37be3YZMEFGnZ-5Grild8npjp97vHntzxsxADhKWvGj-JUPhb3NVGUxT1mR2_P4e3u1XiOqTwItA=w2400" alt="insertion sort"/></div>
+<div style="display: flex; align-items: flex-start; justify-content: center; font-size: 14px; color: #777;">Pseudocode for Stable Marriage Algorithm</div>
 
 <br>
 
 ## Code example
 
-Here's the code in JavaScript for mergesort:
+Here's the code in JavaScript:
 
 ```js
 
