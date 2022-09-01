@@ -37,7 +37,7 @@ The Gale–Shapley algorithm (also known as the deferred acceptance algorithm) c
 
 $n+1$
 
-$$
+```algorithm
 \begin{algorithm}[H]
 \DontPrintSemicolon
 \SetAlgoLined
@@ -57,13 +57,13 @@ instructions3\;
 }
 \caption{While loop with If/Else condition}
 \end{algorithm}
-$$
+```
 
 They presented an algorithm to do so
 
 In quicksort, divide and compare happen before the fork. When the recursion goes down to the end, we only need to stitch individual elements back together. In mergesort, however, an array of elements is always divided equally without comparing. when the recursion goes down to the end, compare happens and stitch back with the designated order, ascending or descending.
 
-<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/EIbh-aP55dd4uCU2fMlWrBc2IkVW31HUUh0pGZfdtt2CAk7HI66xSOirdAI6BZz5tO-LWFEqCIduZeeIoLvIt7NOpBosgZ1hwra7u12_MMmuLWPjqMsuEhDzlYrx-2Cu1jk4fER_-g=w2400" alt="insertion sort"/>
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="" alt="insertion sort"/>
 <div style="display: flex; align-items: flex-start; justify-content: center; font-size: 14px; color: #777;">Illustration of Mergesort</div>
 
 <br>
