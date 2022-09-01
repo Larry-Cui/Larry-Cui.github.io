@@ -11,7 +11,7 @@ As mentioned in other posts before, recursion is just a coding technique, not fa
 Let's take a look at a recursion example:
 
 ```js
-// find GCD (greatest common divisor)
+// find GCD (greatest common dividor)
 // using recursive coding method
 
 const gcdFind = function (a, b) {

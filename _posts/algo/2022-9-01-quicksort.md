@@ -55,12 +55,14 @@ function quicksort(array) {
   const partition_left_sort = quicksort(left);
   const partition_right_sort = quicksort(right);
 
-  // The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+  // The concat() method is used to merge two or more arrays.
+  // This method does not change the existing arrays,
+  // but instead returns a new array.
   return partition_left_sort.concat(pivot, partition_right_sort);
 }
 ```
 
-Some noted to take here:
+Some notes to take here:
 
 - before every fork to go down into the recursion, the array/sub-array has been separated as less than and greater than the pivot.
 - when roll back from the single element array, `concat` is the key to stitch them together, and that's how we can get a sorted array back on the top.
