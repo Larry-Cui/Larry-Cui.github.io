@@ -84,7 +84,7 @@ Some notes to take here:
 
 ## Time complexity
 
-The dividing part of the mergesort involves no comparison, so we can simply neglect it.
+The dividing part of the mergesort involves no comparison, so we can simply ignore it.
 
 For the sorting and merging part from bottom up, we have $n/2$ comparing and sorting for each level. With a total of $\log n$ levels (height), the complexity is $n \log n$.
 
