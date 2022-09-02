@@ -230,7 +230,7 @@ const matching = () => {
 
 ## Proof of the algorithm
 
-There're two points we need to discuss about the algorithm:
+There're three points we need to discuss about the algorithm:
 
 - **Does it terminates?** Yes, the number of men/women are finite, and the waiting list is finite. As we delete one women's name from his preference list once he is rejected by that woman, after finite round of proposals, we will either find the match, or at the end of the list.
 - **Is it perfect?** Perfect means there's no one left unpaired. Now suppose we have a man and a woman unpaired. Is this situation possible? As far as the algorithm goes, the only situatioin that a woman is unpaired is that she has never received an offer. But as the left man has a whole witing list, so there's no way that the left man cannot propose to her.
