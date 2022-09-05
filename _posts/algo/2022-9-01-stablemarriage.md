@@ -10,13 +10,13 @@ Table of Contents:
 
 - [Introduction](#introduction)
 - [Algorithm explained](#algorithm-explained)
-  - [Pseudocode](#pseudocode)
+	- [Pseudocode](#pseudocode)
 - [Code example](#code-example)
-  - [The variables we need:](#the-variables-we-need)
-  - [helper functions](#helper-functions)
-  - [Key function to execute the algorithm](#key-function-to-execute-the-algorithm)
-  - [Final kick](#final-kick)
-  - [An test result](#an-test-result)
+	- [The variables we need:](#the-variables-we-need)
+	- [helper functions](#helper-functions)
+	- [Key function to execute the algorithm](#key-function-to-execute-the-algorithm)
+	- [Final kick](#final-kick)
+	- [An test result](#an-test-result)
 - [Proof of the algorithm](#proof-of-the-algorithm)
 - [Time complexity](#time-complexity)
 
@@ -243,3 +243,4 @@ We have $n$ men each with a waiting list of $n$ women. Roughly speaking, it take
 But on average, the complexity is $O(n \log n)$. For detailed discussion on the time complexity topic, please refer to ["The Stable Marriage Problem" <i class="fa-sharp fa-solid fa-file-pdf fa-lg"></i>](https://drive.google.com/file/d/1vosbdHsUlBAKfXCYkRtHvNEiFelf1isr/view?usp=sharing) by William Hunt.
 
 <br>
+$$
