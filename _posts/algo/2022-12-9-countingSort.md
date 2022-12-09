@@ -25,7 +25,7 @@ First thing first, what's counting sort?
 **Weaknesses:**
 
 - Restricted inputs. Counting sort only works when the range of potential items in the input is known ahead of time.
-- Space cost. As this algorithm will use a counting array to store elements for further sorting, it uses up extra memory space. If the range of potential values is big, then counting sort requires double the space that the original array takes.
+- Space cost. As this algorithm will use a counting array to store elements for further sorting, it uses up extra memory space. If the range of potential values is big, then counting sort requires extra double space as that of the original array.
 
 <br>
 
