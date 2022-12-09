@@ -27,21 +27,14 @@ Here's how we do sort using radix sort:
 <br>
 
 - We start off by finding the maximum element in the unsorted input array (maxim). The number of digits (d) in maxim gives us the number of passes we need to run to get the fully sorted output.
-  Here, the maxim = 455 and d = 3. This tells us that 3 passes will be required to fully sort the array
-  The loop will run once for units place, once for the tens place, and once for hundreds place before the array is finally sorted.
-
-- <br>
-
-**Weaknesses:**
-
-- Restricted inputs. Counting sort only works when the range of potential items in the input is known ahead of time.
-- Space cost. As this algorithm will use a counting array to store elements for further sorting, it uses up extra memory space. If the range of potential values is big, then counting sort requires extra double space as that of the original array.
+- Here, the maxim = 455 and d = 3. This tells us that 3 passes will be required to fully sort the array.
+- The loop will run once for units place, once for the tens place, and once for hundreds place before the array is finally sorted.
+- This array consists of integers in the decimal number system — so the digits will range from 0 to 9. We know we’ll need a count array of size 10 for each pass.
 
 <br>
 
-**Illustration of Counting Sort:**
+We start sorting from the least significant digit (LSD). Once the array is counted based on units place, we can build a unit place sorted array from the count array. Once it's done, we sort the array again, but this time based on tens place. Finally, we sort the result based on hundreds place.
 
-The algorithm can be divided into two parts, first, we count how many times each item occurs, then we build the sorted output.
+Now you see the importance of stable sorting. **Once the lower digits are sorted, you don't want to scramble the order if two elements having the same value at higher digit places.**
 
-**Counting**
-Say we have this array, and we know all numbers in the array will be non-negative integers less than or equal to 10:
+<br>
