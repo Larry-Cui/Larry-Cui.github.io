@@ -96,30 +96,10 @@ And, with that, we're done!
 
 <br>
 
-Below is the implementation of the algorithm, we use recursion again:
+Below is the implementation of the algorithm:
 
 ```js
-// swap function
-const swap = (arr, a, b) => {
-	const temp = arr[a];
-	arr[a] = arr[b];
-	arr[b] = temp;
-};
-
-// recursion realization of the selection sort
-const selectRecur = (array, n) => {
-	if (n === array.length) return array;
-
-	for (let i = n; i < array.length; i++) {
-		if (array[n] > array[i]) swap(array, n, i);
-	}
-
-	return selectRecur(array, n + 1);
-};
-
-// we test by a random array
-const arr = [12, 10, 9, 7, 8, 5, 3, 4, 7, 7, 4, 3, 2, 1, 0, 2];
-console.log(selectRecur(arr, 0));
+// to be provided later...
 ```
 
 <br>
