@@ -15,7 +15,7 @@ The algorithm maintains two subarrays in a given array. But be noted that we don
 
 From the left most element, we iterate the whole array one by one. In every iteration of the selection sort, the minimum element (considering ascending order) from the unsorted rigth subarray is picked and moved to the sorted subarray.
 
-<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/eCcXv3avZEntkJkccU9dHA4JYR6H0jGmPdDp4COLx3W_HrP7QkYzbah4qsUmJzXXH1L2fnQ-2_Bh-OKCNuZGkXxbh3B2UbUqS-Lv5Qng46JUyM-w1LBqWKMDw6EhiiiY-JVNa8x9dg=w2400" alt="selction sort"/></div>
+<img style="display: inline-block; width: 100%; object-fit: cover;" src="https://lh3.googleusercontent.com/eCcXv3avZEntkJkccU9dHA4JYR6H0jGmPdDp4COLx3W_HrP7QkYzbah4qsUmJzXXH1L2fnQ-2_Bh-OKCNuZGkXxbh3B2UbUqS-Lv5Qng46JUyM-w1LBqWKMDw6EhiiiY-JVNa8x9dg=w2400" alt="selction sort"/>
 
 <div style="display: flex; align-items: flex-start; justify-content: center; font-size: 14px; color: #777;">Illustration of Selection Sort</div>
 
