@@ -8,7 +8,7 @@ tags:
 
 This post is based on [Geeksforgeeks](https://www.geeksforgeeks.org/radix-sort/), [Brilliant](https://brilliant.org/wiki/radix-sort/) and [Interview Kickstart](https://www.interviewkickstart.com/learn/radix-sort-algorithm).
 
-The lower bound for the comparison based sorting algorithm (Merge Sort, Heap Sort, Quick-Sort .. etc) is $O(nLogn)$. They cannot do better than that. Counting sort is a linear time sorting algorithm that sort in $O(n+k)$ time when elements are in the range from 1 to k.
+The lower bound for the comparison based sorting algorithm (Merge Sort, Heap Sort, Quick-Sort .. etc) is $O(n \log n)$. They cannot do better than that. Counting sort is a linear time sorting algorithm that sort in $O(n+k)$ time when elements are in the range from 1 to k.
 
 What if the total amount of elements is n, but the values are in the range from 1 to $n^2$ or even larger?
 
