@@ -69,7 +69,7 @@ At last, gather the sorted elements from each bucket to complete the sort.
 
 **Time Complexity**
 
-- **Best Case Complexity** - It occurs when there is no sorting required at bucket level, i.e. the array is already sorted. The best-case time complexity of bucket sort is O(n + k). k here is the bucket number.
+- **Best Case Complexity** - It occurs when there is no sorting required at bucket level, i.e. the array is already sorted. The best-case time complexity of bucket sort is $O(n + k)$. $k$ here is the bucket number.
 - **Worst Case Complexity** - In bucket sort, worst case occurs when the elements are of the close range in the array, because of that, they have to be placed in the same bucket. So, some buckets have more number of elements than others. As we have no good way than comparison-based algorithm to sort elements in a bucket, in the worst-case time complexity of bucket sort is $O(n^2)$.
 
 <br>
